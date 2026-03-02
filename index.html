@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coimbatore District Bus Services</title>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="header">
+    Coimbatore District Bus Services
+</div>
+
+<div class="container">
+
+    <div class="form-row">
+
+        <div class="input-group">
+            <label>From</label>
+            <input type="text" id="fromInput" 
+                   onkeyup="showSuggestions(this, 'from')" 
+                   placeholder="Enter Departure Location">
+            <div id="fromSuggestions" class="suggestions"></div>
+        </div>
+
+        <div class="input-group">
+            <label>To</label>
+            <input type="text" id="toInput" 
+                   onkeyup="showSuggestions(this, 'to')" 
+                   placeholder="Enter Destination Location">
+            <div id="toSuggestions" class="suggestions"></div>
+        </div>
+
+    </div>
+
+    <button onclick="searchBus()">Search Buses</button>
+
+    <div id="results"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
